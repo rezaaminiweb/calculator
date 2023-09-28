@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <title>Document</title>
+    <style>
+        body{
+            background-image: linear-gradient(45deg , rgb(143, 108, 108) , rgb(137, 140, 92) , rgb(122, 148, 99) , rgb(92, 140, 136) , rgb(93, 109, 140) , rgb(131, 97, 130));
+        }
+        .container{
+            width: 95%;
+            height: 100vh;
+            border: 2px solid black;
+            margin: auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            >.calculater{
+                background-image: linear-gradient(to bottom , rgb(0, 213, 255),rgb(55, 130, 168));
+                width: 90%;
+                box-shadow: 0px 0px 18px 10px black;
+                /* border: 2px solid red; */
+                padding: 50px;
+                display: flex;
+                /* flex-direction: column; */
+                flex-wrap: wrap;
+                justify-content: center;
+                #inputUser{
+                    /* user-select: none; */
+                    pointer-events: none;
+                    width: 100%;
+                    padding: 30px 25px;
+                    background-color: rgb(77, 76, 76);
+                    color: white;
+                    font-size :32px;
+                    direction: ltr;
+                    text-align: right;
+                    border: none;
+                    outline: none;
+                    border-radius: 10px;
+                    margin-bottom: 20px;
+                    &::placeholder{
+                        color: white;
+                    }
+                }
+                >.btn{
+                    /* text-align: right; */
+                    /* width:23%; */
+                    height: 80px;
+                    margin: 5px 5px;
+                    font-size: 25px;
+                    background-color: rgb(110, 108, 108);
+                    color: white;
+                    font-weight: bolder;
+                    &:hover{
+                        background-color: white;
+                        border: 2px solid black;
+                        color: black;
+                    }
+                    &:nth-of-type(4){
+                        background-color: rgb(151, 155, 94);
+                        font-weight: bolder;
+                        font-size: 32px;
+                        &:hover{
+                            background-color: white;
+                            border:2px solid rgb(151, 155, 94);
+                            color: rgb(151, 155, 94);
+                        }
+                        /* user-select: none; */
+                    }
+                    &:nth-of-type(8){
+                        background-color: rgb(151, 155, 94);
+                        font-weight: bolder;
+                        font-size: 32px;
+                        &:hover{
+                            background-color: white;
+                            border:2px solid rgb(151, 155, 94);
+                            color: rgb(151, 155, 94);
+                        }
+                    }
+                    &:nth-of-type(16){
+                        background-color: rgb(151, 155, 94);
+                        font-weight: bolder;
+                        font-size: 32px;
+                        &:hover{
+                            background-color: white;
+                            border:2px solid rgb(151, 155, 94);
+                            color: rgb(151, 155, 94);
+                        }
+                    }
+                    &:nth-of-type(12){
+                        background-color: rgb(151, 155, 94);
+                        font-weight: bolder;
+                        font-size: 32px;
+                        &:hover{
+                            background-color: white;
+                            border:2px solid rgb(151, 155, 94);
+                            color: rgb(151, 155, 94);
+                        }
+                    }
+                    &:nth-of-type(17){
+                        background-color: rgb(13, 248, 99);
+                        font-weight: bolder;
+                        font-size: 32px;
+                        &:hover{
+                            background-color: white;
+                            border:2px solid rgb(13, 248, 99);
+                            color: rgb(13, 248, 99);
+                        }
+                    }
+                    &:nth-of-type(15){
+                        background-color: rgb(137, 69, 69);
+                        font-weight: bolder;
+                        font-size: 32px;
+                        &:hover{
+                            background-color: white;
+                            border:2px solid rgb(137, 69, 69);
+                            color: rgb(137, 69, 69);
+                        }
+                    }
+                }
+            }
+
+        }
+    </style>
+  </head>
+  <body>
+    <section class="container">
+        <div class="calculater">
+            <input type="text" placeholder="0" id="inputUser">
+            <br>
+            <button class="btn col-2 col-md-3" onclick="reza(1)">1</button>
+            <button class="btn col-2 col-md-3" onclick="reza(2)">2</button>
+            <button class="btn col-2 col-md-3" onclick="reza(3)">3</button>
+            <button class="btn col-3 col-md-2" onclick="reza('+')">+</button>
+            <br>
+            <button class="btn col-2 col-md-3" onclick="reza(4)">4</button>
+            <button class="btn col-2 col-md-3" onclick="reza(5)">5</button>
+            <button class="btn col-2 col-md-3" onclick="reza(6)">6</button>
+            <button class="btn col-3 col-md-2" onclick="reza('-')">-</button>
+            <br>
+            <button class="btn col-2 col-md-3" onclick="reza(7)">7</button>
+            <button class="btn col-2 col-md-3" onclick="reza(8)">8</button>
+            <button class="btn col-2 col-md-3" onclick="reza(9)">9</button>
+            <button class="btn col-3 col-md-2" onclick="reza('*')">*</button>
+            <br>
+            <button class="btn col-2 col-md-3" onclick="reza('.')">.</button>
+            <button class="btn col-2 col-md-3" onclick="reza(0)">0</button>
+            <button class="btn col-2 col-md-3" onclick="clears()">C</button>
+            <button class="btn col-3 col-md-2" onclick="reza('/')">/</button>
+            <br>
+
+            
+            
+            <button class="btn col-10" onclick="equal()">=</button>
+        </div>
+    </section>
+
+    <script>
+        let input = document.getElementById('inputUser')
+        var result = ''
+        function reza (value) {
+            result +=value
+            input.value=result
+        }
+        function equal(){
+            s = eval(result)
+            
+            input.value=s
+            console.log(s);
+            result=''
+        }
+        function clears(){
+            input.value=''
+            result=''
+        }
+
+
+    </script>
+  </body>
+</html>
